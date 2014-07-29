@@ -1,24 +1,24 @@
 {
-  "name": "starterkit",
-  "version": "0.1.0",
-  "description": "Starterkit for building out components of the UI",
+  "name": "starter",
+  "version": "0.0.0",
+  "description": "Basic starter theme kit for projects",
   "main": "Gulpfile.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bassettsj/bc14.git"
+    "url": "git://github.com/kalamuna/starter.git"
   },
   "keywords": [
-    "Drupal"
+    "kalatheme"
   ],
-  "author": "Steven Bassett <steven.j.bassett@gmail.com",
-  "license": "GPL2",
+  "author": "",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bassettsj/bc14/issues"
+    "url": "https://github.com/kalamuna/starter/issues"
   },
-  "homepage": "https://github.com/bassettsj/bc14",
+  "homepage": "https://github.com/kalamuna/starter",
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "gulp": "^3.8.6",
@@ -32,7 +32,6 @@
     "gulp-uglify": "^0.3.1",
     "yargs": "^1.2.6",
     "coffeeify": "^0.7.0",
-    "underscore": "^1.6.0",
     "gulp-util": "^3.0.0",
     "gulp-sourcemaps": "^1.1.0",
     "del": "^0.1.1",
