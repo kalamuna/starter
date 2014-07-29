@@ -1,9 +1,10 @@
 {
-  "name": "bc14",
+  "name": "starter-kit",
   "version": "0.0.0",
   "homepage": "https://github.com/bassettsj/bc14",
   "authors": [
-    "Steven Bassett <steven.j.bassett@gmail.com>"
+    "Steven Bassett <steven.j.bassett@gmail.com>",
+    "Thiago"
   ],
   "main": "scripts/index.coffee",
   "license": "MIT",
@@ -15,13 +16,6 @@
     "tests"
   ],
   "devDependencies": {
-    "scut": "~0.10.4",
-    "modular-scale": "~2.0.5",
-    "colors": "~2.0.0",
-    "font-awesome": "~4.1.0",
-    "foundation": "zurb/bower-foundation#~5.3.1"
-  },
-  "dependencies": {
-    "kss-node-template": "htanjo/kss-node-template#~0.1.5"
+    "bootstrap-sass-official": "~3.2.0+1"
   }
 }
