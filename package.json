@@ -1,0 +1,41 @@
+{
+  "name": "starterkit",
+  "version": "0.1.0",
+  "description": "Starterkit for building out components of the UI",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bassettsj/bc14.git"
+  },
+  "keywords": [
+    "Drupal"
+  ],
+  "author": "Steven Bassett <steven.j.bassett@gmail.com",
+  "license": "GPL2",
+  "bugs": {
+    "url": "https://github.com/bassettsj/bc14/issues"
+  },
+  "homepage": "https://github.com/bassettsj/bc14",
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "gulp": "^3.8.6",
+    "gulp-sass": "^0.7.2",
+    "gulp-csscomb": "^3.0.0-2",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-csslint": "^0.1.4",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1",
+    "yargs": "^1.2.6",
+    "coffeeify": "^0.7.0",
+    "underscore": "^1.6.0",
+    "gulp-util": "^3.0.0",
+    "gulp-sourcemaps": "^1.1.0",
+    "del": "^0.1.1",
+    "gulp-kss": "0.0.2"
+  }
+}
