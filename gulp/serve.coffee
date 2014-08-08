@@ -9,3 +9,6 @@ module.exports = (gulp) ->
       livereload: true
     })
   )
+  gulp.task('reload-styleguide', ->
+    gulp.src(paths.docs.src).pipe(connect.reload())
+  )
