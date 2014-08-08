@@ -14,4 +14,5 @@ module.exports =
     watch: 'scripts/**/*.{coffee,js}'
   docs:
     src: 'styleguide/**/*.*'
+    watch: 'styleguide/**/*.{scss,md}'
     assets: 'docs/contents/dist'
