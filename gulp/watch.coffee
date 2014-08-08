@@ -5,7 +5,7 @@ module.exports = (gulp) ->
   gulp.task('watch', ->
     gulp.watch(paths.scripts.watch, ['srcipts'])
     .pipe(connect.reload())
-    gulp.watch(paths.css.dest, ['css'])
+    gulp.watch(paths.css.src, ['css','kss'])
     .pipe(conntect.reload())
   )
 
