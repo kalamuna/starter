@@ -1,13 +1,7 @@
 gulp = require('gulp')
 paths = require('./paths')
 del = require('del')
-
-require('./css')(gulp)
-require('./kss')(gulp)
-require('./scripts')(gulp)
-require('./watch')(gulp)
-require('./serve')(gulp)
-require('./deploy')(gulp)
+connect = require('gulp-connect')
 
 gulp.task('clean', (cb) ->
   del([
@@ -18,10 +12,15 @@ gulp.task('clean', (cb) ->
 
 gulp.task('compile', ['kss'])
 
-gulp.task('default', [
-  'clean'
-  'compile'
-])
+gulp.task('default', ['compile'])
 
+require('./css')(gulp)
+require('./kss')(gulp)
+require('./scripts')(gulp)
+require('./serve')(gulp)
+require('./watch')(gulp)
+require('./deploy')(gulp)
+
+gulp.task('serve',['compile','connect','watch']);
 
 module.exports = gulp

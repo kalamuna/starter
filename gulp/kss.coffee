@@ -2,7 +2,7 @@ paths = require('./paths')
 gulpkss = require('gulp-kss')
 
 module.exports = (gulp) ->
-  gulp.task('kss', ["scripts","css"], ->
+  gulp.task('kss', ->
     gulp.src(paths.css.src)
     .pipe(gulpkss({
         overview:'./scss/styleguide.md'
