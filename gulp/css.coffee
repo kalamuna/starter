@@ -3,14 +3,19 @@ prefixer = require('gulp-autoprefixer')
 csslint = require('gulp-csslint')
 csscomb = require('gulp-csscomb')
 cssmin = require('gulp-cssmin')
+gulpsass = require('gulp-sass')
 paths = require('./paths')
 rename = require('gulp-rename')
 pkg = require('../package')
 
-
 module.exports = (gulp) ->
-  gulp.task('css', ->
-    prefixer({ cascade: true })
+  gulp.task('css', ['clean'], ->
+    gulp.src(paths.css.src)
+    .pipe(gulpsass({
+      includePaths: paths.css.inlcudes
+      sourceMap: 'map'
+    }))
+    .pipe(prefixer({ cascade: true }))
     .pipe(csscomb())
     .pipe(csslint(paths.css.csslintrc))
     .pipe(csslint.reporter())

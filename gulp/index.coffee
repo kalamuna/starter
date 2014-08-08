@@ -6,7 +6,6 @@ require('./css')(gulp)
 require('./kss')(gulp)
 require('./scripts')(gulp)
 require('./watch')(gulp)
-require('./sass')(gulp)
 require('./serve')(gulp)
 require('./deploy')(gulp)
 

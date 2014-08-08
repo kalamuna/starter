@@ -5,6 +5,7 @@ yargs = require('yargs')
 pkg = require('../package.json')
 paths = require('./paths')
 sourcemaps = require('gulp-sourcemaps')
+
 module.exports = (gulp) ->
   gulp.task('scripts', ->
     return gulp.src(paths.scripts.src, {read: false})
@@ -22,7 +23,5 @@ module.exports = (gulp) ->
     .pipe(rename({suffix:'.min.'}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.scripts.dest))
-
   )
-
   return gulp

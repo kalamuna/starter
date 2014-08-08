@@ -2,7 +2,6 @@ module.exports =
   build: 'dist'
   css:
     src: 'scss/**/*.scss'
-    # dest: 'dist/css'
     dest: 'dist/css'
     includes: [
       '../node_modules'
