@@ -1,7 +1,7 @@
 gulp = require('gulp')
 paths = require('./paths')
 del = require('del')
-connect = require('gulp-connect')
+webserver = require('gulp-webserver')
 
 gulp.task('clean', (cb) ->
   del([
@@ -21,6 +21,6 @@ require('./serve')(gulp)
 require('./watch')(gulp)
 require('./deploy')(gulp)
 
-gulp.task('serve',['compile','connect','watch']);
+gulp.task('serve',['compile','webserver','watch']);
 
 module.exports = gulp

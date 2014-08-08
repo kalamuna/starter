@@ -1,14 +1,17 @@
 paths = require('./paths');
-connect = require('gulp-connect');
+webserver = require('gulp-webserver');
 
 module.exports = (gulp) ->
-  gulp.task('connect', ->
-    connect.server({
-      root: 'styleguide',
-      port: 8000,
-      livereload: true
-    })
+  gulp.task('webserver', ->
+    gulp.src('styleguide')
+    .pipe(
+      webserver({
+        fallback: 'index.html',
+        livereload: true
+      })
+    )
   )
   gulp.task('reload-styleguide', ->
-    gulp.src(paths.docs.src).pipe(connect.reload())
+    console.log('reload-styleguide!')
+    gulp.src(paths.docs.watch).pipe(webserver.reload())
   )
