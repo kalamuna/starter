@@ -11,6 +11,10 @@ module.exports = (gulp) ->
     gulp.watch(paths.scripts.watch, ['scripts'])
   )
 
+  gulp.task('watch-kss', ['kss'], ->
+    gulp.watch(paths.docs.watch, ['kss'])
+  )
+
   gulp.task('watch-reload-styleguide', ->
     gulp.watch(paths.docs.watch, ['kss','reload-styleguide'])
   )
