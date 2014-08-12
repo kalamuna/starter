@@ -2,7 +2,6 @@ module.exports =
   build: 'dist'
   css:
     src: 'scss/**/*.scss'
-    # dest: 'dist/css'
     dest: 'dist/css'
     includes: [
       '../node_modules'
@@ -14,5 +13,7 @@ module.exports =
     dest: 'dist/js'
     watch: 'scripts/**/*.{coffee,js}'
   docs:
+    watch: 'scss/**/*.{scss,md}'
     src: 'styleguide/**/*.*'
+    watch: 'styleguide/**/*.{scss,md}'
     assets: 'docs/contents/dist'

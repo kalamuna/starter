@@ -1,10 +1,7 @@
 gulp = require('gulp')
-ghPages = require('gulp-gh-pages')
 paths = require('./paths')
 del = require('del')
-require('./css')(gulp)
-require('./scripts')(gulp)
-require('./watch')(gulp)
+webserver = require('gulp-webserver')
 
 gulp.task('clean', (cb) ->
   del([
@@ -12,21 +9,18 @@ gulp.task('clean', (cb) ->
     paths.docs.assets
   ], cb)
 )
-gulp.task('compile', ['scripts','css'])
 
-gulp.task('default', [
-  'clean'
-  'compile'
-])
+gulp.task('compile', ['kss'])
 
-gulp.task('deploy', ['default'], ->
-  gulp.src(paths.docs.src)
-  .pipe(ghPages({
-    remoteUrl: 'git@github.com:bassettsj/bc14.git'
-    origin: 'origin'
-    branch: 'gh-pages'
-    push: true
-  }))
-)
+gulp.task('default', ['compile'])
+
+require('./css')(gulp)
+require('./kss')(gulp)
+require('./scripts')(gulp)
+require('./serve')(gulp)
+require('./watch')(gulp)
+require('./deploy')(gulp)
+
+gulp.task('serve',['compile','webserver','watch']);
 
 module.exports = gulp
